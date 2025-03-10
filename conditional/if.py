@@ -19,3 +19,15 @@ if age >= 18:
     print("You are eligible to vote!")
 else:
     print("You are not eligible to vote.")
+
+
+
+#nested condition
+gender = input("Enter your gender: ")
+if gender == 'M':
+    print("Male")
+elif gender == 'F':
+    print("Female")
+else:
+    print("Invalid input")
+
