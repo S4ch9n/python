@@ -31,3 +31,21 @@ elif gender == 'F':
 else:
     print("Invalid input")
 
+
+#calucaltor using nested condition
+num1 = float(input("enter first number: "))
+num2 = float(input("enter second number: "))
+operation = input("enter operation you want to be perform : + , - , / , * : ")
+if operation == "+":
+    print(num1 + num2)
+elif operation == "-":
+    print(num1 - num2)
+elif operation == "/":
+    if num2 == 0 :
+        print("num2 should not be zero")
+    else:
+        print(num1 / num2)
+elif operation == "*":
+    print(num1 * num2)
+else:
+    print("invalid operation")
