@@ -1,3 +1,4 @@
+#count even odd
 num = 10
 countEven = 0
 countOdd = 0
@@ -21,9 +22,21 @@ num2 = 5
 rev = 0
 i = 1
 rem = 0
-while(i <= num2):
+while i <= num2:
     rem = num % 10
     rev = rev * 10 + rem
     num = num//10
     i+=1
 print(rev)
+
+
+#count digits
+digits = 12345
+countDigit = 0
+
+while digits > 0:
+    countDigit += 1
+    digits //= 10  # Perform integer division to reduce the number
+
+print(countDigit)
+
