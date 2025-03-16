@@ -14,3 +14,14 @@ for i in range(1,11):
 #3: printing hello 10 times
 for i in range(1,11):
     print("hello")
+
+
+#count digit
+digits = 12345
+countDigit = 0
+
+# Convert digits to a string to iterate through each digit
+for digit in str(digits):
+    countDigit += 1
+
+print(countDigit)
