@@ -40,3 +40,17 @@ while digits > 0:
 
 print(countDigit)
 
+
+#multiplication table
+# Input from the user for the number
+number = int(input("Enter a number to display its multiplication table: "))
+# Initialize the counter
+i = 1
+
+print(f"\nMultiplication Table for {number}:")
+
+# While loop to generate the multiplication table
+while i <= 10:
+    print(f"{number} x {i} = {number * i}")
+    i += 1  # Increment the counter
+
