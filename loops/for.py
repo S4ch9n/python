@@ -15,6 +15,10 @@ for i in range(1,11):
 for i in range(1,11):
     print("hello")
 
+#will print odds
+for i in range(1,11,2):
+    print(i)
+
 
 #count digit
 digits = 12345
