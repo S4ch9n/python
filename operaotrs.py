@@ -260,3 +260,12 @@ print(max_value)  # Output: 20
 # Operator precedence example
 result = 10 + 2 * 3  # Multiplication has higher precedence
 print(result)  # Output: 16
+
+
+name = 'jddw'
+if len(name) < 3:
+    print("name must be at least three character")
+elif len(name) < 10 :
+    print("name is greater than 10 character")
+else:
+    print("exceed length")
