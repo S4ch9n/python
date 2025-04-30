@@ -69,3 +69,40 @@ print(numbers)  # Output: [9, 5, 2, 1, 10, 11]
 
 # index() - Returns the index of the first occurrence of an element.
 print(numbers.index(5))  # Output: 1
+
+
+#find the largest element in list
+numbers = [1, 10, 2, 3, 5, 2]  # List of numbers
+max_number = numbers[0]  # Initialize max_number with the first element of the list
+
+# Loop through each number in the list
+for number in numbers:
+    if number > max_number:  # Check if the current number is greater than max_number
+        max_number = number  # Update max_number if the condition is true
+
+# Print the maximum number found in the list
+print(f"maximum number in list is : {max_number}")
+
+
+#2D list : A 2D list in Python is essentially a list of lists, where each element of the main list is itself a list. It can be used to represent tabular data, such as a grid, matrix, or spreadsheet.
+matrix = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+]
+for rows in matrix:
+    for item in rows:
+        print(f"items present in matrix are : {item}") 
+        
+        
+        
+        
+        
+        
+#write a program to remove the duplicates in list
+numbers = [2,3,4,2,12,3,1,32,6,6,7]
+unique = []
+for number in numbers:
+    if number not in unique:
+        unique.append(number)
+print(unique)
