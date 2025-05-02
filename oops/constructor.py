@@ -46,3 +46,5 @@ class Person:
 john = Person("John Smith")
 print(john.name)  # Outputs: John Smith
 john.talk()  # Outputs: Hi, I am John Smith
+bob = Person("bob sock")
+bob.talk()
