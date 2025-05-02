@@ -1,3 +1,6 @@
+from dictionary import output
+
+
 def sum(a , b):
     return a + b
 print(sum(2,3))
@@ -45,3 +48,19 @@ def square(num):
 
 result = square(3)
 print(result)
+
+
+
+def emoji_converter(message):
+    words = message.split(" ")
+    emojis = {
+        ":)": "☺️",
+        ":(": "😔"
+    }
+    output = ""
+    for word in words:
+        output += emojis.get(word, word) + " "
+    return output.strip()  
+
+message = input(">")
+print(emoji_converter(message))
