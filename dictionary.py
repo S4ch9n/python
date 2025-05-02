@@ -1,6 +1,7 @@
 # A dictionary in Python is a built-in data structure that allows you to store and retrieve data using key-value pairs.
 # Dictionaries are mutable, meaning you can modify them after creation.
 # They are unordered in versions of Python before 3.7, but starting with Python 3.7, dictionaries maintain the insertion order.
+from email import message_from_string
 
 # Creating a Dictionary
 # You can create a dictionary using curly braces {} or the dict() constructor.
@@ -61,3 +62,44 @@ for key, value in my_dict.items():
 
 # Dictionaries are incredibly versatile and widely used in Python
 # for tasks like counting items, organizing data, and implementing mappings.
+
+
+
+
+
+
+#digit game
+# Prompt the user to enter a phone number
+phone = input("Phone : ")
+# Dictionary to map digits to their word equivalents
+digit_mapping = {
+    "1": "one",
+    "2": "two",
+    "3": "three",
+    "4": "four"
+}
+# Initialize an empty string to build the output
+output = ""
+# Loop through each character in the user-provided phone number
+for ch in phone:
+    # Get the word equivalent of the digit from the dictionary
+    # If the digit is not found in the dictionary, default to '!'
+    output += digit_mapping.get(ch, '!') + " "
+# Print the final output string
+print(output)
+
+
+
+
+#emoji game
+message = input(">")
+words = message.split(" ")
+emojis = {
+    ":)" : "😊",
+    ":(" : "😔"
+}
+output2 = ""
+for char in words:
+    output2 += emojis.get(char, char) + " "
+
+print(output2)
