@@ -106,3 +106,15 @@ for number in numbers:
     if number not in unique:
         unique.append(number)
 print(unique)
+
+
+#even number in list using loop
+num = [1,2,3,4,5,6,7,8,9,10]
+even_number = [nums for nums in num if nums % 2 == 0]
+print(f"even number are : {even_number}")
+
+
+#odds number in list using loop
+num2 = [1,2,3,4,5,6,7,8,9,10]
+odd_numbers = [nums for nums in num2 if nums % 2 != 0]
+print(f"odd number are : {odd_numbers}")
