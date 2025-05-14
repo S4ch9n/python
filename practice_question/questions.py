@@ -1,4 +1,4 @@
-#maximum and minimun in tuples
+#maximum and minimum in tuples
 tuples = (1,2,3,4,5)
 print(max(tuples))
 print(min(tuples))
@@ -61,9 +61,8 @@ def factorial(n):
         return 1
     else:
         return n * factorial(n - 1)  # Recursive call
-
-# Test the function
 print(factorial(5))  # Should print 120
+
 
 # Write a Python code to convert a string to an integer
 str3 = '12345'  # A string containing numeric characters
@@ -74,10 +73,13 @@ toInt = int(str3)  # Converts the string to an integer
 print(toInt)  # Prints the converted integer
 print(type(toInt))  # Prints the type of toInt (should be <class 'int'>)
 
+
+
 #find the smallest positive number in list
 list1 = [1,-2,4,-5,-9,10,3,4,6,7]
 positive_num = min([num for num in list1 if num > 0 ])
 print(positive_num)
+
 
 
 #find the  positive number in list without using function
@@ -236,3 +238,45 @@ def longest_word(sentence):
 
 # Call the function and print the longest word in the sentence
 print(longest_word("The fox jumps over the lazy dog"))  # Output: jumps
+
+
+
+#sum of elements in list
+new_list = [1,2,4,5]
+total = 0
+for add in new_list:
+    total += add
+print(total)
+
+#swap two number in list using temp variable
+new_list2 = [1,2,3,4,5]
+temp = 0
+temp = new_list2[0]
+new_list2[0] = new_list2[4]
+new_list2[4] = temp
+print(new_list2)
+
+#merge two list in python
+concat = new_list + new_list2
+print(concat)
+
+
+#remove duplicates from list using loops
+listt = [1, 2, 3, 4, 2, 21, 1, 3, 22, 4, 55]
+unique_list = []
+for num in listt:
+    if num not in unique_list:
+        unique_list.append(num)
+print(unique_list)  # Output the list with duplicates removed
+
+
+#prime number
+prime_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+for num in prime_list:
+    if num > 1:
+        for i in range(2, num):
+            if num % i == 0:
+                break
+        else:
+            print(f"Number is prime: {num}")
+
