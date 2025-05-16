@@ -280,3 +280,11 @@ for num in prime_list:
         else:
             print(f"Number is prime: {num}")
 
+
+
+
+#join two list
+list1 = [1,2,3,4,5]
+list2 = [6,7,8,9,10]
+add_list = list1 + list2
+print(add_list)
