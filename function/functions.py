@@ -282,3 +282,124 @@ g()
 print('global a : ',a)
 h()
 print('global a : ',a)
+
+
+
+
+#inner function
+#can access variables from the outer function
+def fun5(msg): #outer function
+    def inner_fun(): #inner function
+        print(msg)
+    inner_fun()
+fun5("hello")
+
+
+#local variable access
+# Define the outer function
+def outer_fun():
+    # A variable defined in the outer function
+    msg = "hello this is outer function"
+    # Print the message from the outer function
+    print(msg)
+
+    # Define the inner function
+    def inner_fun():
+        # Print a message from the inner function
+        print("inner function")
+        # Access and use the variable from the outer function
+        print(f"{msg} , inside inner function")
+
+    # Call the inner function from within the outer function
+    inner_fun()
+
+# Call the outer function
+outer_fun()
+
+
+#modifying variable using nonlocal
+# Define the outer function
+def outer_fun2():
+    # A local variable 'a' defined in the outer function
+    a = 20
+    print(f"The value of a inside outer function is: {a}")
+
+    # Define the inner function
+    def inner_fun2():
+        nonlocal a  # Use the 'nonlocal' keyword to modify 'a' from the outer function scope
+        a = 54  # Modify the value of 'a'
+        print(f"The value of a inside inner function is: {a}")
+
+    # Call the inner function
+    inner_fun2()
+
+    # Print the value of 'a' after it has been modified by the inner function
+    print(f"The value of a after modifying in inner function is: {a}")
+
+# Call the outer function
+outer_fun2()
+
+
+#closure in function
+# Define the outer function
+def closure_fun(a):  # 'a' is a parameter of the outer function
+    # Define the inner function
+    def closure_fun2():  # Inner function
+        # Access and print the variable 'a' from the enclosing scope
+        print(a)
+    # Return the inner function (not called yet, just the function object)
+    return closure_fun2
+
+# Create a closure by calling the outer function with an argument
+closure_func = closure_fun('hello , Closure')
+
+# Call the returned inner function
+closure_func()
+
+
+
+#high order function : function that take one or more function as arguments , returns a function as a result or do both
+# Define a higher-order function
+def ho_fun(f, x):
+    # Takes a function 'f' and a value 'x' as arguments
+    return f(x)  # Applies the function 'f' to 'x' and returns the result
+
+# Define a function to calculate the square of a number
+def square(x):
+    return x * x  # Return the square of 'x'
+
+# Call the higher-order function with 'square' and the value 5
+result = ho_fun(square, 5)
+
+# Print the result
+print(result)
+
+
+
+#function as a first-class object : in python functon are first class object , meaning they can be treated like other object , such as integer m strings or lists
+#assigning function to a variable
+# Define a function to generate a greeting message
+def greet(n):
+    return f"hello {n}!"
+
+# Assign the function 'greet' to another variable 'greet_msg'
+greet_msg = greet
+
+# Call the function using the new variable and print the result
+print(greet_msg("John"))
+
+#passing function as an argument
+def apply(f,v):
+    return f(v)
+res2 = apply(greet_msg , "nick")
+print(res2)
+
+#returning a function from another function
+def make_mult(f):
+    def mult(x):
+        return x * f
+    return mult
+dbl = make_mult(2)
+print(dbl(5))
+
+
