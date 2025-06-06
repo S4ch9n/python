@@ -288,3 +288,13 @@ list1 = [1,2,3,4,5]
 list2 = [6,7,8,9,10]
 add_list = list1 + list2
 print(add_list)
+
+
+#find length of string
+a = "Hello"
+count = 0
+
+# Loop through each character in the string 'a'
+for char in a:
+   # Increment 'count' by 1 for each character
+    count += 1
