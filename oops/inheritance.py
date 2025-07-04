@@ -1,6 +1,8 @@
 #inheritance : when we define a class that inherit all properties of parent class
 #Inheritance in Python
-# Inheritance is a mechanism in Python (and object-oriented programming in general) where a new class (called the child class or subclass) can inherit attributes and methods from an existing class (called the parent class or superclass). This allows the child class to reuse code from the parent class and, if needed, override or extend its functionality.
+# Inheritance is a mechanism in Python (and object-oriented programming in general) where a new class (called the child class or subclass)
+# can inherit attributes and methods from an existing class (called the parent class or superclass).
+# This allows the child class to reuse code from the parent class and, if needed, override or extend its functionality.
 # Parent class (also called base class or superclass)
 from tuples import names
 
