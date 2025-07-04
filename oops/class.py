@@ -109,6 +109,35 @@ print(student4.name)
 # print(Student.class_year)
 
 
+# Define the class
+class Students:
+    # Class variable shared by all instances of the class
+    section = 'A'
+
+    # Constructor to initialize instance variables
+    def __init__(self, name, age):
+        # Instance variables unique to each object
+        self.name = name
+        self.age = age
+
+# Create an object (instance) of the class
+student1 = Students("Akash", 16)
+
+# Access and print class and instance variables
+print(student1.section)  # Output: A (class variable)
+print(student1.name)     # Output: Akash (instance variable)
+print(student1.age)      # Output: 16 (instance variable)
+
+# Modify instance variable 'name' for student1 only
+student1.name = "Rahul"
+print(student1.name)     # Output: Rahul (only student1's name changed)
+
+# Modify class variable 'section' for all instances of the class
+Students.section = "B"
+print(student1.section)  # Output: B (class variable changed for all instances)
+
+
+
 
 
 
