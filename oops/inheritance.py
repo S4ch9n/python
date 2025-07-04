@@ -6,60 +6,93 @@
 # Parent class (also called base class or superclass)
 from tuples import names
 
-
-# Base class representing a generic color
-class Color:
-    def __init__(self, color_name):
-        """
-        Initialize the color with a name.
-
-        :param color_name: The name of the color (e.g., "white", "black").
-        """
-        self.color_name = color_name
-    def display_color(self):
-        """
-        Print a message displaying the color's name.
-        """
-        print(f"The color is {self.color_name}.")
-# Derived class representing a specific color (black)
-class Black(Color):
-    def display_black_message(self):
-        """
-        Print a specific message about the color black.
-        """
-        print("This is the black color.")
-
-
-# Example usage of the classes
-if __name__ == "__main__":
-    # Create an instance of the base Color class with the color "white"
-    white_color = Color("white")
-    print(white_color.color_name)  # Output the name of the color
-    white_color.display_color()  # Call the method to display the color
-
-    # Create an instance of the Black class with a specific color name
-    black_color = Black("Black")
-    black_color.display_color()  # Call the method from the base class
-    black_color.display_black_message()  # Call the method specific to the Black class
-
+#simple example
+# Base class
 class Animal:
-    def __init__(self, name):
+    def __init__(self, name, age):
         self.name = name
+        self.age = age
 
     def speak(self):
         print(f"{self.name} makes a sound.")
-# Child class (inherits from Animal)
-class Dog(Animal):
-    def __init__(self, name, breed):
-        # Calling the parent class constructor
-        super().__init__(name)
-        self.breed = breed
-    def speak(self):
-        print(f"{self.name} barks!")
-# Create an instance of Dog
-my_dog = Dog("Buddy", "Golden Retriever")
 
-# Accessing methods and attributes
-print(my_dog.name)  # Inherited from Animal
-print(my_dog.breed)  # Defined in Dog
-my_dog.speak()  # Overridden method in Dog
+# Child class
+class Dog(Animal):
+    def bark(self):
+        print(f"{self.name} says: Woof!")
+
+# Another child class
+class Cat(Animal):
+    def meow(self):
+        print(f"{self.name} says: Meow!")
+
+# Create instances
+dog1 = Dog("Buddy", 5)
+cat1 = Cat("Whiskers", 3)
+
+# Call methods
+dog1.speak()   # Inherited from Animal
+dog1.bark()    # Defined in Dog
+
+cat1.speak()   # Inherited from Animal
+cat1.meow()    # Defined in Cat
+
+
+
+
+#multiple inheritance : inherit from more than one parent class
+# Base class: Animal
+class Animal:
+    def __init__(self, name):
+        self.name = name  # common attribute
+
+    def eat(self):
+        print(f"{self.name} is eating")  # common method for all animals
+
+    def sleep(self):
+            print(f"{self.name} is sleeping")
+
+# Prey class inherits from Animal
+class Prey(Animal):
+    def flee(self):  # behavior specific to prey
+        print(f"{self.name} is fleeing")
+
+
+# Predator class also inherits from Animal
+class Predator(Animal):
+    def hunt(self):  # behavior specific to predators
+        print(f"{self.name} is hunting")
+
+
+# Rabbit is a type of Prey
+class Rabbit(Prey):
+    pass  # no extra behavior — inherits everything from Prey and Animal
+
+
+# Hawk is a type of Predator
+class Hawk(Predator):
+    pass  # no extra behavior — inherits from Predator and Animal
+
+
+# Fish is both a Prey and a Predator (Multiple Inheritance)
+class Fish(Prey, Predator):
+    pass  # inherits from both Prey and Predator — and Animal
+
+
+# Create instances of the animals
+rabbit = Rabbit("Bugs")
+hawk = Hawk("Tony")
+fish = Fish("Mist")
+
+# Call methods on rabbit (inherits from Prey → Animal)
+rabbit.flee()  # From Prey
+rabbit.eat()   # From Animal
+
+# Call method on hawk (inherits from Predator → Animal)
+hawk.eat()     # From Animal
+
+
+
+
+
+#multilevel inheritance = inherit from a parent which inherits from another parent.
