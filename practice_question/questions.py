@@ -312,3 +312,118 @@ even_wrds = [w for w in wrds if len(w) % 2 == 0]
 # Join the filtered words back into a sentence
 res = " ".join(even_wrds)
 print(res)
+
+
+#What is the difference between / and // in Python?
+a = 12
+b = 2
+print(a / b)
+print(a //b)
+#/ represents precise division (result is a floating point number) whereas // represents floor division (result is an integer)
+
+
+
+#Pass a function as an argument in Python
+def sub(a,b):
+    return a - b
+
+def applyFunc(func, a , b):
+    return func(a,b)
+
+print(applyFunc(sub , 4 ,2))
+
+
+#. What is pass in Python?
+# The pass statement is a placeholder that does nothing.
+# It is used when a statement is syntactically required but no code needs to run.
+# Commonly used when defining empty functions, classes or loops during development.
+def passFun():
+    pass
+
+passFun()
+
+#in python argument is neither “Pass by Value” nor “Pass by Reference” but it is “Pass by Object Reference”.
+#Depending on the type of object you pass in the function, the function behaves differently.
+# Immutable objects show “pass by value” whereas mutable objects show “pass by reference”.
+#🔹 Call by Value (Immutable Types)
+
+# When you pass immutable objects (like int, float, str, tuple),
+# Python does not allow changes to the original object. It acts like call by value.
+
+def callByValue(a):
+    a += 10
+    print("The value of a inside the function is:", a)
+
+a = 5
+callByValue(a)
+print("The value of a outside the function is:", a)
+
+
+#Call by Reference (Mutable Types)
+# When you pass mutable objects (like list, dict, set), changes inside the function do affect the original object.
+def passByrefence(lst):
+    lst.append(4)
+    print("inside the function , list items are : " , lst)
+
+lst = [1,2,3,]
+print("Before calling the function , elements in list are : " , lst)
+passByrefence(lst)
+print("After calling the function , elements in list are : " , lst)
+
+
+
+
+
+#A lambda function is an anonymous function. This function can have any number of parameters but, can have just one statement.
+#Syntax :
+# lambda arguments: expression
+
+add = lambda x,y : x + y
+print(add(2,3))
+
+
+#print string
+lstr = lambda s: print(s)
+lstr("hello")
+
+
+
+#What is List Comprehension? Give an Example.
+# List comprehension is a way to create lists using a concise syntax.
+# It allows us to generate a new list by applying an expression to each item in an existing iterable (such as a list or range).
+# This helps us to write cleaner, more readable code compared to traditional looping techniques.
+list1 = [1,2,3,4,5]
+list_result = [num * 2 for num in list1]
+print(list_result)
+
+list2 = [1,2,3,4,5]
+list_result2 = [num for num in list2 if num > 3]
+print(list_result2)
+
+even_list = [1,2,3,4,5,6,7,8,9,10]
+print_even = [even for even in even_list if even % 2 == 0]
+print(print_even)
+
+
+#*args : *args: The special syntax *args in function definitions is used to pass a variable number of arguments to a function.
+# Python program to illustrate *args for a variable number of arguments:
+def fun(*args):
+    for value in args:
+        print(value)
+
+# fun('Hello' , 'My' , 'Name' , 'ABC')
+
+s1 = "hello"
+s2 = "My"
+s3 = "Name"
+fun(s1,s2,s3)
+
+
+#**kwargs: The special syntax **kwargs in function definitions is used to pass a variable length argument list.
+# We use the name kwargs with the double star **.
+def greet(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+greet(name="Alice", age=25, city="New York")
+
