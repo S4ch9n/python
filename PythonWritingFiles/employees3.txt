@@ -1,0 +1,3 @@
+name,age,job
+John,30,Cook
+Sandy,27,Scientist
