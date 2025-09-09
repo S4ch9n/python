@@ -49,3 +49,57 @@ elif operation == "*":
     print(num1 * num2)
 else:
     print("invalid operation")
+
+
+#wap number is even and off
+number = int(input("enter a number : "));
+if number % 2 != 0:
+    print("number is even")
+
+
+#wap to check if number is positive , negative or zero
+
+
+
+
+#find the largest element among three number
+a = int(input("enter first number : "))
+b = int(input("enter second number : "))
+c = int(input("enter third number : "))
+
+if a > b:
+    if a > c :
+        print("a is greater ")
+    else:
+        print("c is greater")
+elif b > a:
+    if b > c:
+        print("b is greater")
+    else:
+        print("c is grater")
+else:
+    print("c is greater")
+
+
+#name greater than 5 and less than 10 , and name should start with "a"
+name = input("Enter a username: ")
+
+if 5 < len(name) < 10:
+    if name.startswith("a"):
+        print(name)
+    else:
+        print("Invalid")
+else:
+    print("Invalid name length must be greater than 5 and less than 10")
+
+
+
+
+#or
+users = input("Enter usernames separated by commas: ").split(",")
+
+# strip spaces and filter
+printNames = [name.strip() for name in users if name.strip().startswith("a") and 5 < len(name.strip()) < 10]
+
+print("Valid names:", printNames)
+
