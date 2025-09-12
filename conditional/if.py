@@ -103,3 +103,53 @@ printNames = [name.strip() for name in users if name.strip().startswith("a") and
 
 print("Valid names:", printNames)
 
+
+
+
+
+#
+# Practical 3: Student Management Program
+# Input student details
+name = input("Enter student name: ")
+roll = input("Enter roll number: ")
+
+# Input marks for 3 subjects directly
+m1 = float(input("Enter marks for Subject 1 (out of 100): "))
+m2 = float(input("Enter marks for Subject 2 (out of 100): "))
+m3 = float(input("Enter marks for Subject 3 (out of 100): "))
+
+attendance = float(input("Enter attendance percentage: "))
+
+# Processing results
+total = m1 + m2 + m3
+percentage = total / 3
+
+# Grade calculation
+if percentage >= 90:
+    grade = "A+"
+elif percentage >= 75:
+    grade = "A"
+elif percentage >= 60:
+    grade = "B"
+elif percentage >= 50:
+    grade = "C"
+else:
+    grade = "F"
+
+# Reward eligibility
+if percentage >= 85 and attendance >= 90:
+    reward = "Eligible for Scholarship"
+elif percentage >= 75 and attendance >= 80:
+    reward = "Eligible for Certificate of Merit"
+elif percentage >= 60 and attendance >= 75:
+    reward = "Eligible for Participation Certificate"
+else:
+    reward = "Not eligible for extra benefits"
+
+# Display result
+print(f"Roll No: {roll}")
+print(f"Marks: {m1}, {m2}, {m3}")
+print(f"Average Percentage: {percentage:.2f}%")
+print(f"Grade: {grade}")
+print(f"Attendance: {attendance}%")
+print(f"Reward Eligibility: {reward}")
