@@ -118,3 +118,15 @@ print(f"even number are : {even_number}")
 num2 = [1,2,3,4,5,6,7,8,9,10]
 odd_numbers = [nums for nums in num2 if nums % 2 != 0]
 print(f"odd number are : {odd_numbers}")
+
+
+#list comprehension
+list1 = [1,2,3,4,5,6,7,8,9,10]
+new_list = [lst for  lst in list1]
+new_list2 = [lst for lst in list1 if  lst > 3]
+even_list = [lst for lst in list1 if lst % 2 == 0]
+odd_list = [lst for lst in list1 if lst % 2 != 0]
+print(new_list)
+print(new_list2)
+print(even_list)
+print(odd_list)
