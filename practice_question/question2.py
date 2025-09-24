@@ -71,3 +71,18 @@ else:
     print(f"The color '{color}' is not in the list.")
 
 
+#check a number is palindrome or not
+num = int(input("Enter a number: "))
+dup = num
+reverseNum = 0
+
+while num > 0:
+    reverseNum = reverseNum * 10 + num % 10
+    num = num // 10
+
+if dup == reverseNum:
+    print(dup , ": Palindrome")
+else:
+    print(dup ," : Not a palindrome")
+
+
