@@ -403,3 +403,15 @@ dbl = make_mult(2)
 print(dbl(5))
 
 
+#print sum of list using function
+def sumList(list1):
+    sum = 0
+    for i in list1:
+        sum += i
+    return sum
+
+list1 = [1,2,3,4,5]
+print(sumList(list1))
+
+
+
