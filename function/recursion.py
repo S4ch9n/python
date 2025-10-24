@@ -62,6 +62,44 @@ print(non_tail_fact(5))  # Output: 120
 
 
 
+#generate power set of a given list of integers recursively
+def power_set(nums):
+    # Base case: the power set of an empty list is just the empty set
+    if not nums:
+        return [[]]
+
+    # Take the first element
+    first = nums[0]
+    # Recursively find power set of the rest
+    rest_power_set = power_set(nums[1:])
+
+    # For each subset in the smaller power set,
+    # create a new one by including the first element
+    with_first = []
+    for subset in rest_power_set:
+        with_first.append([first] + subset)
+
+    # Combine subsets with and without the first element
+    return rest_power_set + with_first
+
+
+def even_sum_subsets(nums):
+    # Generate full power set
+    all_subsets = power_set(nums)
+    # Keep only subsets with even sums
+    even_subsets = [subset for subset in all_subsets if sum(subset) % 2 == 0]
+    # Sort so that smaller groups come last
+    even_subsets.sort(key=len, reverse=True)
+    return even_subsets
+
+
+# Example usage:
+nums = [1, 2, 3]
+result = even_sum_subsets(nums)
+print("Even-sum subsets (largest first):")
+for subset in result:
+    print(subset)
+
 
 
 
