@@ -1,4 +1,4 @@
-#modules = a file containing code you want to include in your program use 'import' to include a module (built-in you own useful to break
+#modules = a file containing code you want to include in your program use 'import' to include a module-packages (built-in you own useful to break
 #up a large program reusable separate files.
 
 import math
