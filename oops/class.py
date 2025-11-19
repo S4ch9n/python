@@ -141,8 +141,22 @@ print(student1.section)  # Output: B (class variable changed for all instances)
 
 
 
+class Test1:
+    def test_method(self):
+        print("This is parent class 1")
+class Test2(Test1):
+    def test2_method(self):
+        print("This is parent class 2")
+class Test3(Test2):
+    def test3_method(self):
+        print("This is parent class 3")
 
+obj = Test3()
+obj.test_method()
+obj.test2_method()
 
+#create a python class name circle with attributes radius nd color . Implement methods area to calculate the area of circle
+#to display the radius nd color of circle
 
 
 
