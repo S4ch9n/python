@@ -18,7 +18,7 @@ print(mult)  # Output: 200
 
 # Calculate the division of a by b
 div = a / b
-print(sum)  # Incorrect print statement, should be 'print(div)' for correct output
+print(div)
 
 # Calculate a raised to the power of b
 pow = a ** b
