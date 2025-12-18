@@ -1,4 +1,4 @@
-#the reduce function is used to apply a particular function passed in its arguments to all of the list elements mentioned inthe sequence passed along.This function is defined in "functools" modules
+#the reduce function is used to apply a particular function passed in its arguments to all of the list elements mentioned in the sequence passed along.This function is defined in "functools" modules
 # syntax : reduce(fun,iterable[,initial])
 
 # Parameters :
