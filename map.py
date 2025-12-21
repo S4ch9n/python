@@ -1,4 +1,4 @@
-# map() function in python  : the map() function returns a object(which is an iterator) pf the result after applying the given function to each item of a given iterable(list,tuples,etc).
+# map() function in python  : the map() function returns an object(which is an iterator) of the result after applying the given function to each item of a given iterable(list,tuples,etc).
 # syntax:map(fun,iter)
 # Parameters
 # fun : it is a function to which map passes each element of given iterable
