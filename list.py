@@ -31,10 +31,6 @@ numbers1 = [1, 2, 3]
 numbers1.append(4)
 print(numbers1)  # Output: [1, 2, 3, 4]
 
-# insert() - Inserts an item at a specific position.
-numbers2 = [1, 2, 3, 4]
-numbers2.insert(1, 99)  # Insert 99 at index 1
-print(numbers2)  # Output: [1, 99, 2, 3, 4]
 
 # insert() - Inserts an item at a specific position.
 numbers3 = [1, 2, 3, 4]
