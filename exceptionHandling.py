@@ -43,20 +43,3 @@ finally:
 
 
 
-#wap to handle index error and key error getting input form user
-#for index error
-list1 = [12,3,4,1,33]
-n = int(input("enter index value : "))
-try:
-    print(list1[n])
-except IndexError:
-    print("index is out of range")
-
-
-#for key error
-dict1 = {
-    "name" : "alice",
-    "age" : 14,
-}
-try:
-    print(dict["city"])
